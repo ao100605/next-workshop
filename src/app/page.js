@@ -9,6 +9,16 @@ export default function Home() {
       <div className={styles.heist_list}>
         {/* Display the heist cards here using heist info to fill info for the cards*/}
         {/* Hint: https://coursework.vschool.io/mapping-components-in-react/ */}
+        {heistInfo.map((heist, index) => (
+          <HeistCard
+            key={index}
+            image={heist.image}
+            title={heist.title}
+            location={heist.location}
+            payout={heist.payout}
+            difficulty={heist.difficulty}
+          />
+        ))}
       </div>
     </main>
   );
